@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Sucursalesapp</string>
-    <string name="textView3">Nombre del banco</string>
-
+    <string name="main_profile">Ver perfil</string>
+    <string name="main_map">Ver mapa</string>
+    <string name="main_about">Acerca de</string>
+    <string name="main_logout">Cerrar Sesión</string>
 </resources>
