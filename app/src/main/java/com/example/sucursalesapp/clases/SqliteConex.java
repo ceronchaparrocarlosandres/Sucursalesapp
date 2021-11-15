@@ -1,2 +1,4 @@
-package com.example.sucursalesapp.clases;public class SqliteConex {
+package com.example.sucursalesapp.clases;
+
+public class SqliteConex {
 }
