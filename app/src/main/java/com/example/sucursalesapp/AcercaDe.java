@@ -16,7 +16,7 @@ public class AcercaDe extends AppCompatActivity {
         Button btnvolver = (Button) findViewById(R.id.button5);
         btnvolver.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 onBackPressed();
             }
         });

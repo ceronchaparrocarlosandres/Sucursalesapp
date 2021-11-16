@@ -1,0 +1,1523 @@
+Index: app/src/main/res/menu/mainmenu.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/menu/mainmenu.xml b/app/src/main/res/menu/mainmenu.xml
+--- a/app/src/main/res/menu/mainmenu.xml	(date 1637016519768)
++++ b/app/src/main/res/menu/mainmenu.xml	(date 1637016519768)
+@@ -1,6 +1,8 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <menu xmlns:android="http://schemas.android.com/apk/res/android">
+ 
++
++
+     <item
+         android:id="@+id/main_settings"
+         android:title="@string/main_profile" />
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(date 1637016519752)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1637016519752)
+@@ -6,4 +6,13 @@
+     android:layout_height="match_parent"
+     tools:context=".MainActivity">
+ 
++    <Button
++        android:id="@+id/button6"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="228dp"
++        android:text="Button"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_login.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_login.xml b/app/src/main/res/layout/activity_login.xml
+--- a/app/src/main/res/layout/activity_login.xml	(date 1637016519752)
++++ b/app/src/main/res/layout/activity_login.xml	(date 1637016519752)
+@@ -5,17 +5,18 @@
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:background="@color/black"
+-    tools:context=".MainActivity">
++    tools:context=".LoginActivity">
+ 
+     <ImageView
+         android:id="@+id/imageView"
+-        android:layout_width="191dp"
+-        android:layout_height="124dp"
++        android:layout_width="212dp"
++        android:layout_height="186dp"
+         android:layout_marginTop="80dp"
+         app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.537"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/banco2" />
++        app:srcCompat="@mipmap/ic_launcher" />
+ 
+     <EditText
+         android:id="@+id/editTextTextEmailAddress"
+@@ -26,12 +27,16 @@
+         android:layout_marginTop="32dp"
+         android:layout_marginEnd="32dp"
+         android:background="#673AB7"
++        android:backgroundTint="@color/black"
+         android:ems="10"
+         android:hapticFeedbackEnabled="false"
+         android:hint="Digite el Email"
+         android:importantForAccessibility="auto"
+         android:inputType="textEmailAddress"
+         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
++        android:textColor="@color/white"
++        android:textColorHint="@color/white"
++        android:textSize="16sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+@@ -44,10 +49,14 @@
+         android:layout_marginTop="16dp"
+         android:layout_marginEnd="32dp"
+         android:background="#673AB7"
++        android:backgroundTint="@color/black"
+         android:ems="10"
+         android:hint="Digite la Contraseña"
+         android:inputType="textPassword"
+         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
++        android:textColor="@color/white"
++        android:textColorHint="@color/white"
++        android:textSize="16sp"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+Index: app/src/main/res/layout/activity_acerca_de.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_acerca_de.xml b/app/src/main/res/layout/activity_acerca_de.xml
+--- a/app/src/main/res/layout/activity_acerca_de.xml	(date 1637016519736)
++++ b/app/src/main/res/layout/activity_acerca_de.xml	(date 1637016519736)
+@@ -4,6 +4,63 @@
+     xmlns:tools="http://schemas.android.com/tools"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
++    android:background="@color/black"
+     tools:context=".AcercaDe">
+ 
++    <ImageView
++        android:id="@+id/imageView4"
++        android:layout_width="169dp"
++        android:layout_height="212dp"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/button5"
++        app:layout_constraintVertical_bias="0.15"
++        app:srcCompat="@mipmap/ic_launcher" />
++
++    <TextView
++        android:id="@+id/textView"
++        android:layout_width="250dp"
++        android:layout_height="58dp"
++        android:layout_marginStart="80dp"
++        android:layout_marginTop="56dp"
++        android:text="Creado por:"
++        android:textColor="@color/white"
++        android:textSize="20sp"
++        app:drawableTint="#911F1F"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent" />
++
++    <TextView
++        android:id="@+id/textView2"
++        android:layout_width="192dp"
++        android:layout_height="40dp"
++        android:layout_marginTop="8dp"
++        android:text="Carlos Andres Ceron"
++        android:textColor="@color/white"
++        android:textSize="16sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView" />
++
++    <TextView
++        android:id="@+id/textView3"
++        android:layout_width="192dp"
++        android:layout_height="40dp"
++        android:text="Robert Alexander Limas"
++        android:textColor="@color/white"
++        android:textSize="16sp"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView2" />
++
++    <Button
++        android:id="@+id/button5"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="36dp"
++        android:text="Volver"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_bienvenida.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_bienvenida.xml b/app/src/main/res/layout/activity_bienvenida.xml
+--- a/app/src/main/res/layout/activity_bienvenida.xml	(date 1637016519736)
++++ b/app/src/main/res/layout/activity_bienvenida.xml	(date 1637016519736)
+@@ -7,13 +7,13 @@
+     android:background="@color/black"
+     tools:context=".bienvenida">
+ 
+-    <ImageView
+-        android:id="@+id/imageView2"
+-        android:layout_width="wrap_content"
+-        android:layout_height="wrap_content"
+-        android:layout_marginTop="252dp"
+-        app:layout_constraintEnd_toEndOf="parent"
+-        app:layout_constraintStart_toStartOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/banco2" />
++   <ImageView
++       android:id="@+id/imageView2"
++       android:layout_width="252dp"
++       android:layout_height="211dp"
++       android:layout_marginTop="252dp"
++       app:layout_constraintEnd_toEndOf="parent"
++       app:layout_constraintStart_toStartOf="parent"
++       app:layout_constraintTop_toTopOf="parent"
++       app:srcCompat="@mipmap/ic_launcher" />
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_agregar_banco.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_agregar_banco.xml b/app/src/main/res/layout/activity_agregar_banco.xml
+--- a/app/src/main/res/layout/activity_agregar_banco.xml	(date 1637016519721)
++++ b/app/src/main/res/layout/activity_agregar_banco.xml	(date 1637016519721)
+@@ -17,19 +17,22 @@
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+-        app:srcCompat="@drawable/banco2" />
++        app:srcCompat="@mipmap/ic_launcher" />
+ 
+     <EditText
+         android:id="@+id/editTextTextPersonName5"
+         android:layout_width="310dp"
+         android:layout_height="47dp"
+-        android:layout_marginStart="24dp"
++        android:layout_marginStart="16dp"
+         android:layout_marginTop="8dp"
+-        android:layout_marginEnd="24dp"
++        android:layout_marginEnd="16dp"
+         android:background="#673AB7"
++        android:backgroundTint="@color/black"
+         android:ems="10"
+         android:hint="Nombre del banco"
+         android:inputType="textPersonName"
++        android:textColor="@color/white"
++        android:textColorHint="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.495"
+         app:layout_constraintStart_toStartOf="parent"
+@@ -43,9 +46,12 @@
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="24dp"
+         android:background="#673AB7"
++        android:backgroundTint="@color/black"
+         android:ems="10"
+-        android:hint="Nombre del banco"
++        android:hint="Descripcion"
+         android:inputType="textPersonName"
++        android:textColor="@color/white"
++        android:textColorHint="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.504"
+         app:layout_constraintStart_toStartOf="parent"
+@@ -59,9 +65,12 @@
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="24dp"
+         android:background="#673AB7"
++        android:backgroundTint="@color/black"
+         android:ems="10"
+         android:hint="Nombre del banco"
+         android:inputType="textPersonName"
++        android:textColor="@color/white"
++        android:textColorHint="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.504"
+         app:layout_constraintStart_toStartOf="parent"
+@@ -75,9 +84,12 @@
+         android:layout_marginTop="8dp"
+         android:layout_marginEnd="24dp"
+         android:background="#673AB7"
++        android:backgroundTint="@color/black"
+         android:ems="10"
+         android:hint="Nombre del banco"
+         android:inputType="textPersonName"
++        android:textColor="@color/white"
++        android:textColorHint="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintHorizontal_bias="0.509"
+         app:layout_constraintStart_toStartOf="parent"
+@@ -90,7 +102,10 @@
+         android:layout_marginStart="165dp"
+         android:layout_marginTop="8dp"
+         android:background="#673AB7"
++        android:backgroundTint="@color/black"
+         android:text="Cajero"
++        android:textColor="@color/white"
++        android:textColorHint="@color/white"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+@@ -99,28 +114,34 @@
+         android:id="@+id/imageButton2"
+         android:layout_width="59dp"
+         android:layout_height="56dp"
++        android:layout_marginStart="32dp"
+         android:layout_marginTop="60dp"
+         android:background="#673AB7"
++        android:backgroundTint="@color/black"
++        app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8"
+-        app:srcCompat="@android:drawable/ic_menu_mylocation"
+-        tools:layout_editor_absoluteX="51dp" />
++        app:srcCompat="@android:drawable/ic_menu_mylocation" />
+ 
+     <Button
+         android:id="@+id/button3"
+         android:layout_width="111dp"
+         android:layout_height="58dp"
++        android:layout_marginStart="16dp"
+         android:layout_marginTop="60dp"
+-        android:text="Button"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8"
+-        tools:layout_editor_absoluteX="127dp" />
++        android:text="Guardar"
++        android:textAllCaps="false"
++        app:layout_constraintStart_toEndOf="@+id/imageButton2"
++        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+ 
+     <Button
+         android:id="@+id/button4"
+         android:layout_width="111dp"
+         android:layout_height="58dp"
++        android:layout_marginStart="16dp"
+         android:layout_marginTop="60dp"
+-        android:text="Button"
+-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8"
+-        tools:layout_editor_absoluteX="250dp" />
++        android:text="Cancelar"
++        android:textAllCaps="false"
++        app:layout_constraintStart_toEndOf="@+id/button3"
++        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/menubottom.xml
+===================================================================
+diff --git a/app/src/main/res/layout/menubottom.xml b/app/src/main/res/layout/menubottom.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/menubottom.xml	(date 0)
++++ /dev/null	(date 0)
+@@ -1,77 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:app="http://schemas.android.com/apk/res-auto"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    android:layout_gravity="center_vertical"
+-    android:orientation="vertical">
+-
+-    <LinearLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:orientation="horizontal">
+-
+-        <TextView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_gravity="center_vertical"
+-            android:layout_weight="1"
+-            android:gravity="center_vertical"
+-            android:minWidth="300dp"
+-            android:text="@string/menu_ubicacion_actual" />
+-
+-        <ImageView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_gravity="center_vertical"
+-            android:layout_weight="1"
+-            app:srcCompat="@drawable/ic_ubicacion_actual" />
+-
+-    </LinearLayout>
+-
+-    <LinearLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:orientation="horizontal">
+-
+-        <TextView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_gravity="center_vertical"
+-            android:layout_weight="1"
+-            android:gravity="center_vertical"
+-            android:minWidth="300dp"
+-            android:text="@string/menu_ver_mapa" />
+-
+-        <ImageView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_gravity="center_vertical"
+-            android:layout_weight="1"
+-            app:srcCompat="@drawable/ic_mapa" />
+-
+-    </LinearLayout>
+-
+-    <LinearLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content"
+-        android:orientation="horizontal">
+-
+-        <TextView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_gravity="center_vertical"
+-            android:layout_weight="1"
+-            android:gravity="center_vertical"
+-            android:minWidth="300dp"
+-            android:text="@string/menu_admin_sitios" />
+-
+-        <ImageView
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_gravity="center_vertical"
+-            android:layout_weight="1"
+-            app:srcCompat="@drawable/ic_sitios" />
+-
+-    </LinearLayout>
+-</LinearLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/activity_maps.xml
+===================================================================
+diff --git a/app/src/main/res/layout/activity_maps.xml b/app/src/main/res/layout/activity_maps.xml
+deleted file mode 100644
+--- a/app/src/main/res/layout/activity_maps.xml	(date 0)
++++ /dev/null	(date 0)
+@@ -1,9 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+-    xmlns:map="http://schemas.android.com/apk/res-auto"
+-    xmlns:tools="http://schemas.android.com/tools"
+-    android:id="@+id/map"
+-    android:name="com.google.android.gms.maps.SupportMapFragment"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent"
+-    tools:context=".MapsActivity" />
+\ No newline at end of file
+Index: app/src/main/res/values/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/themes.xml b/app/src/main/res/values/themes.xml
+--- a/app/src/main/res/values/themes.xml	(date 1637016519705)
++++ b/app/src/main/res/values/themes.xml	(date 1637016519705)
+@@ -13,4 +13,17 @@
+         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+         <!-- Customize your theme here. -->
+     </style>
++    <style name="Theme.Sucursalesapp_barra" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
++        <!-- Primary brand color. -->
++        <item name="colorPrimary">@color/purple_500</item>
++        <item name="colorPrimaryVariant">@color/purple_700</item>
++        <item name="colorOnPrimary">@color/white</item>
++        <!-- Secondary brand color. -->
++        <item name="colorSecondary">@color/teal_200</item>
++        <item name="colorSecondaryVariant">@color/teal_700</item>
++        <item name="colorOnSecondary">@color/black</item>
++        <!-- Status bar color. -->
++        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
++        <!-- Customize your theme here. -->
++    </style>
+ </resources>
+\ No newline at end of file
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values/strings.xml b/app/src/main/res/values/strings.xml
+--- a/app/src/main/res/values/strings.xml	(date 1637016839522)
++++ b/app/src/main/res/values/strings.xml	(date 1637016839522)
+@@ -1,6 +1,6 @@
+ <resources>
+     <string name="app_name">Sucursalesapp</string>
+-    <string name="main_profile">Ver perfil</string>
++    <string name="main_profile">Agregar Banco</string>
+     <string name="main_map">Ver mapa</string>
+     <string name="main_about">Acerca de</string>
+     <string name="main_logout">Cerrar Sesión</string>
+Index: app/src/main/res/drawable/ic_launcher_background.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/drawable/ic_launcher_background.xml b/app/src/main/res/drawable/ic_launcher_background.xml
+--- a/app/src/main/res/drawable/ic_launcher_background.xml	(date 1637016519689)
++++ b/app/src/main/res/drawable/ic_launcher_background.xml	(date 1637016519689)
+@@ -4,167 +4,75 @@
+     android:height="108dp"
+     android:viewportWidth="108"
+     android:viewportHeight="108">
+-    <path
+-        android:fillColor="#3DDC84"
+-        android:pathData="M0,0h108v108h-108z" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M9,0L9,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,0L19,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,0L29,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,0L39,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,0L49,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,0L59,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,0L69,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,0L79,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M89,0L89,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M99,0L99,108"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,9L108,9"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,19L108,19"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,29L108,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,39L108,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,49L108,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,59L108,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,69L108,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,79L108,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,89L108,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M0,99L108,99"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,29L89,29"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,39L89,39"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,49L89,49"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,59L89,59"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,69L89,69"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M19,79L89,79"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M29,19L29,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M39,19L39,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M49,19L49,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M59,19L59,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M69,19L69,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
+-    <path
+-        android:fillColor="#00000000"
+-        android:pathData="M79,19L79,89"
+-        android:strokeWidth="0.8"
+-        android:strokeColor="#33FFFFFF" />
++  <group android:scaleX="0"
++      android:scaleY="0"
++      android:translateX="54"
++      android:translateY="54">
++      <path android:fillColor="#3DDC84"
++            android:pathData="M0,0h108v108h-108z"/>
++      <path android:fillColor="#00000000" android:pathData="M9,0L9,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M19,0L19,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M29,0L29,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M39,0L39,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M49,0L49,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M59,0L59,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M69,0L69,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M79,0L79,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M89,0L89,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M99,0L99,108"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,9L108,9"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,19L108,19"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,29L108,29"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,39L108,39"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,49L108,49"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,59L108,59"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,69L108,69"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,79L108,79"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,89L108,89"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M0,99L108,99"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M19,29L89,29"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M19,39L89,39"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M19,49L89,49"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M19,59L89,59"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M19,69L89,69"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M19,79L89,79"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M29,19L29,89"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M39,19L39,89"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M49,19L49,89"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M59,19L59,89"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M69,19L69,89"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++      <path android:fillColor="#00000000" android:pathData="M79,19L79,89"
++            android:strokeColor="#33FFFFFF" android:strokeWidth="0.8"/>
++  </group>
+ </vector>
+Index: app/src/main/res/values-night/themes.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/values-night/themes.xml b/app/src/main/res/values-night/themes.xml
+--- a/app/src/main/res/values-night/themes.xml	(date 1637016519674)
++++ b/app/src/main/res/values-night/themes.xml	(date 1637016519674)
+@@ -1,6 +1,6 @@
+ <resources xmlns:tools="http://schemas.android.com/tools">
+     <!-- Base application theme. -->
+-    <style name="Theme.Sucursalesapp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
++    <style name="Theme.Sucursalesapp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+         <!-- Primary brand color. -->
+         <item name="colorPrimary">@color/purple_200</item>
+         <item name="colorPrimaryVariant">@color/purple_700</item>
+Index: app/src/main/res/drawable-hdpi/ic_mapa.png
+===================================================================
+diff --git a/app/src/main/res/drawable-hdpi/ic_mapa.png b/app/src/main/res/drawable-hdpi/ic_mapa.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-hdpi/ic_mapa.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,7 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   $   $   � ��  JIDATx^�1�0���]�$]]e��UWV]]u��z�9�/�t�%/{���8�Y6iҟB��u���zgUU��i�\��p,��֙��wW8�-�v���{ck�J�H��Zٹ�Uˎ��y�=�@T�
+-A��j|/!Z;��
+-��F����ۡpC�2}yG᮶>��Mciq�O���y����@(���@(���@(���@(���@(���@(���@(��G�+l����|��],���@��K�r��@��j�;�jΞ�B~P�@��&��Wx^����
+-��=�U��GL<�Lv�:���z�57���΍1i��yM|ǂi�o    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-hdpi/ic_sitios.png
+===================================================================
+diff --git a/app/src/main/res/drawable-hdpi/ic_sitios.png b/app/src/main/res/drawable-hdpi/ic_sitios.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-hdpi/ic_sitios.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,7 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   $   $   � ��  �IDATx^�;o1���i�i#�>����ii�6mhӒ6�6;�Ys��q6 �'�8���z�>�X<��1�a���*���~CxF���q]p�=�������������U�,�ϖ�y�\a+�o�M/<I����U�њ�k/�/FL�ؘ%[�	q;^�_��M)�w�*�B��1�.6�����9����l$Ż	�_��Ȼ=���D3��J�n�h�����V�W�UVz���SLƕ᳥e%�;�1��v��^�_���/6/<foW���\�O㋵:K>;����ےR��jkɟ�6���J�x0�}�b>
+-f���r�K!�#g�o#8�(���?u�{m�NU
+-��:�'<���]���.^7��-q����W��r
+-��.    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-hdpi/ic_ubicacion_actual.png
+===================================================================
+diff --git a/app/src/main/res/drawable-hdpi/ic_ubicacion_actual.png b/app/src/main/res/drawable-hdpi/ic_ubicacion_actual.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-hdpi/ic_ubicacion_actual.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,5 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   $   $   � ��  xIDATx^햽k�0�3g��9k���]��sV��ڵ]��k�۾G-8^b}XV$?x��һ�|��<�ڶ��}���w��_����mu]�s/~�Itbb�~5�c��B࠰���i��K��
+-k?ԯ��Al0�(>�{/z��"`Ԩ���A����z/&G5.H�h��a1��*'!��g���r��6F�:'�����I�ҎuN]oO4��K����qˊ�H�e�$D/�����̗$D/뽈�������f�Q�^F����q�暪�ۥ`g��)�4��N}���GH���'VKs��jG�N�4`L\�>��I*W��'���R�s�|��JA�Q�0Ɍ:�:ӭ;�s�v�b�$[O|�λ*���^7s��S:��.�H�׹�9�B    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-mdpi/ic_mapa.png
+===================================================================
+diff --git a/app/src/main/res/drawable-mdpi/ic_mapa.png b/app/src/main/res/drawable-mdpi/ic_mapa.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-mdpi/ic_mapa.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,7 +0,0 @@
+-�PNG
+-
+-   
+-IHDR         �w=�   �IDATx^핽�0�;3we���X�a탐��]y[l�D�)���=�J$w��a8���sc�&�K+�G䊼��0�����P?�j�]��1��}��VaX)	�J=1h�0�
+-��!�e؊\��Af@��fr�7�c�ـ���o6 �x�9ƛ
+-�1�l@��fr��5H-�tM�[f#{�O=t�Lr���j���a
+-����{��1a����P�)�/�r�R�a    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-mdpi/ic_sitios.png
+===================================================================
+diff --git a/app/src/main/res/drawable-mdpi/ic_sitios.png b/app/src/main/res/drawable-mdpi/ic_sitios.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-mdpi/ic_sitios.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,7 +0,0 @@
+-�PNG
+-
+-   
+-IHDR         �w=�   �IDATx^ݔ;�0D��Ӧ� |
+-ΐ�is����ىl	�l�&�i�evgw�:<ڶ��a����u�K���Ռ/B���	�^8�Y1�˂�`��E4���P�s�]�ѕ"&���]Ԛ�C�(L�?��Z��>�Z#�@w7�h�1&
+-&��D��'�q�X�=��I�cN�|>2��ДQ�Y ���Y�e�=��P(���YșbW��|��E1�+�� 
+-{])�����V���۞�}����Q����H���2D�    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-mdpi/ic_ubicacion_actual.png
+===================================================================
+diff --git a/app/src/main/res/drawable-mdpi/ic_ubicacion_actual.png b/app/src/main/res/drawable-mdpi/ic_ubicacion_actual.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-mdpi/ic_ubicacion_actual.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,6 +0,0 @@
+-�PNG
+-
+-   
+-IHDR         �w=�   �IDATx^ݕ1�0E;3�v�Դg�3�
+-ghWn��� �8qa�'Y��~Nܪm������8���������b���(NĂ��b��0�{�z�cQ����u�Kv4%$V�b��͝����a��������|-�$�<݌׷�v��
+-���� 5�a"�-*��Q$7�T���EFt\_E�)v�>"�G<~,U�9\�"��@�^�Q}4�G���0�����Ԕ�Gh��gy��j����    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-xhdpi/ic_mapa.png
+===================================================================
+diff --git a/app/src/main/res/drawable-xhdpi/ic_mapa.png b/app/src/main/res/drawable-xhdpi/ic_mapa.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-xhdpi/ic_mapa.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,12 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   0   0   W��  IDATx^�1K3AS�N�� $���Z[[mmM�6i���{p{;��(;0����]�f�ժ�h4�-��n�u�c���o��9���pxJ_O����fx��~�Urp�5{#uw�{�&?wS=f&�$�k������g��l�%�3.?Ἷ����J�|J>q�f:�6�2�����O�$ϧp���2��2~n���Ip�d��2��w��K��<$��N�[
+-L�5����
+-�&{���^���`o�W8`�7؛���
+-�&{�&{���^���`o�W8`�7؛���
+-�&{�&{���^���`o�W8`�7؛���
+-�&{�&{���^���`o�W8`�7؛���
+-�&{�&{���^���`o�W8`��J�7�+�b�
+-ǭlM�
+-��O)�+\�BS�����.����@�x���pώ����jF��))��X���W�YW%���^��G��Ѹ��W�E���8L�r�|�8Б�7?��Ϳ�7���2�r�F���s�Ji2@��K    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-xhdpi/ic_sitios.png
+===================================================================
+diff --git a/app/src/main/res/drawable-xhdpi/ic_sitios.png b/app/src/main/res/drawable-xhdpi/ic_sitios.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-xhdpi/ic_sitios.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,6 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   0   0   W��  �IDATx^혽O�0�;3we�+R�Jt�
+-+�����������S)�ڱ�� �'=)J}��'�M��P�Z{+z��Ct2��@�ƽ�~��1l�8�؃$�5$��TG�bf9�X�+�e�U�v�3'5C�c�EA@G"���'��Fg�Y�*�S�!�7�SEZ���j18�)�r��㪀�Iƾ�Ѧ�uJ�y؉���T	�oO<�%�c�lbf3�vL��"���m&����?pb�l8�Kl��\b�l8�Kl��\b�ldY�9�C��}r���"�4r��G'��#����ǻT���,� ̠${7��:f�!�8��� K��qՐ�y��B��F�yh������rP-�>kXKSAU���*���a"d3|�����C�R��fG*�y|�ȷ�)����,�MΆ�-|�ߪ��
+-]w���SJ���ZJ�(&�+-�uBHbGN��1l�*���U�}���F��+�}�ƻ���W[�>������@?@|��h���+V��p��    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-xhdpi/ic_ubicacion_actual.png
+===================================================================
+diff --git a/app/src/main/res/drawable-xhdpi/ic_ubicacion_actual.png b/app/src/main/res/drawable-xhdpi/ic_ubicacion_actual.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-xhdpi/ic_ubicacion_actual.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,5 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   0   0   W��  �IDATx^�=k�0�;w��9k�v�Y��s��Y��k�t����y�S���8�^0>݇��,?<,,,��u��f�yk��˴o��Oҵ�ɦ1��9V؋�s,��4��q�c���fY�X�3�b�*�����B��m��B&��Ch�ۘ7O���؞�����Ŧyˤ��K����S�VI_�=)}C�]���=�"ڂ�3QJ��=%��d�.ޣ�O{JEs38ۤ
+-ͅ���s�d���D�=�	�1^T�lZ�$"�IE�һ_�w����D)џ���'�upN��ݓr�7{3�L艾�{R���s�/힊����3i���>$� W��|E��/�"/K�fZ3OQr��)U�}��#]R�����\)�Væ�qʂ��b0nU�i�������n�:$��f�:$gW�ٮs	+��RC�Ya�X����ώ~=��Xuov}�oo��m�{t�h]�~X�[�����'����    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-anydpi/ic_mapa.xml
+===================================================================
+diff --git a/app/src/main/res/drawable-anydpi/ic_mapa.xml b/app/src/main/res/drawable-anydpi/ic_mapa.xml
+deleted file mode 100644
+--- a/app/src/main/res/drawable-anydpi/ic_mapa.xml	(date 0)
++++ /dev/null	(date 0)
+@@ -1,11 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24"
+-    android:viewportHeight="24"
+-    android:tint="#333333"
+-    android:alpha="0.6">
+-  <path
+-      android:fillColor="@android:color/white"
+-      android:pathData="M20.5,3l-0.16,0.03L15,5.1 9,3 3.36,4.9c-0.21,0.07 -0.36,0.25 -0.36,0.48V20.5c0,0.28 0.22,0.5 0.5,0.5l0.16,-0.03L9,18.9l6,2.1 5.64,-1.9c0.21,-0.07 0.36,-0.25 0.36,-0.48V3.5c0,-0.28 -0.22,-0.5 -0.5,-0.5zM15,19l-6,-2.11V5l6,2.11V19z"/>
+-</vector>
+Index: app/src/main/res/drawable-anydpi/ic_sitios.xml
+===================================================================
+diff --git a/app/src/main/res/drawable-anydpi/ic_sitios.xml b/app/src/main/res/drawable-anydpi/ic_sitios.xml
+deleted file mode 100644
+--- a/app/src/main/res/drawable-anydpi/ic_sitios.xml	(date 0)
++++ /dev/null	(date 0)
+@@ -1,11 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24"
+-    android:viewportHeight="24"
+-    android:tint="#333333"
+-    android:alpha="0.6">
+-  <path
+-      android:fillColor="@android:color/white"
+-      android:pathData="M12,2C8.13,2 5,5.13 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13c0,-3.87 -3.13,-7 -7,-7zM12,11.5c-1.38,0 -2.5,-1.12 -2.5,-2.5s1.12,-2.5 2.5,-2.5 2.5,1.12 2.5,2.5 -1.12,2.5 -2.5,2.5z"/>
+-</vector>
+Index: app/src/main/res/drawable-anydpi/ic_ubicacion_actual.xml
+===================================================================
+diff --git a/app/src/main/res/drawable-anydpi/ic_ubicacion_actual.xml b/app/src/main/res/drawable-anydpi/ic_ubicacion_actual.xml
+deleted file mode 100644
+--- a/app/src/main/res/drawable-anydpi/ic_ubicacion_actual.xml	(date 0)
++++ /dev/null	(date 0)
+@@ -1,11 +0,0 @@
+-<vector xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:width="24dp"
+-    android:height="24dp"
+-    android:viewportWidth="24"
+-    android:viewportHeight="24"
+-    android:tint="#333333"
+-    android:alpha="0.6">
+-  <path
+-      android:fillColor="@android:color/white"
+-      android:pathData="M12,2C8.14,2 5,5.14 5,9c0,5.25 7,13 7,13s7,-7.75 7,-13c0,-3.86 -3.14,-7 -7,-7zM16,10h-3v3h-2v-3L8,10L8,8h3L11,5h2v3h3v2z"/>
+-</vector>
+Index: app/src/main/res/drawable-xxhdpi/ic_mapa.png
+===================================================================
+diff --git a/app/src/main/res/drawable-xxhdpi/ic_mapa.png b/app/src/main/res/drawable-xxhdpi/ic_mapa.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-xxhdpi/ic_mapa.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,11 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   H   H   U�G  IDATx^�=O�@ ��i�Hw>)��iI�6iiIKK�����h5���Hy#�@��x���Q��U�$I�$I�|���f����sX�������������x�S����%ӳ�5�_����r�W���ݔ9C9g������ZÊN�M��ǭΒ��3�o�k����c�n���Wa����5.�Ұ�n��y�4&eK�,b로3��wȸ�\�[��ٶ׸��S��̫=�.9��שa��6�ϋr�����l׳��쎌o����uh��ۣ����n!ϭa�������}bg-yN
+-�Vv�������y
+-�Vv
+-1,v�lk��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j��ka�ʮ�a+�v��j����
+-�Z��0����X���a�ieW��Z��(���+����Pw���=x��]
+-�{qy�%��wtֿ
+-�k��m.�a��
+-�q�Pw��1c�w�uj�|��o��w�=��ߢ��b��'�d}�/."�zX�P�O�Ixq��ϋ��a���|���X����{�n�Kt�g���PZ:��%>G6]H���JKY�C,&^�x+��=����CI�$I�$I�o�f0[P#s2    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-xxhdpi/ic_sitios.png
+===================================================================
+diff --git a/app/src/main/res/drawable-xxhdpi/ic_sitios.png b/app/src/main/res/drawable-xxhdpi/ic_sitios.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-xxhdpi/ic_sitios.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,6 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   H   H   U�G  �IDATx^�1o�0�3g��5^�Ю]�5Y�&k�f�����P��X�&�?�!�-��(�xd���N���t:�L�� �1�/�o�ܿs�3|�kp-��%��q�ϙ;$@3ڊ>s���Ca4�<�J�������y��%��=��M�G�En�-ܣ���N�g�B~j��*t�"��T�s��$$�9gK�~�����=��Z��W?�.�֔�����%xb�U3'6gE&F�����0#y�%Ϋ�����u��7�[�������1�]bG��(.azɃ��>qL��Zn��,�Ê�MaT�t΂�$�H�G�W��umZ}�p�!�q�b��#�ㄢE��q��fB��Fіㅈ����(%'hs�)	ѡ:H�JO1����C����7�]�wU��q��y��a�ymNͱ�"ڬ�ٔx����Ҷ8���$_EG�[g��� +�b4O���c.�;\��.X�8�<D{����_���uQ���ɳ�4�Av�m߳1+�7�[�1ébn����KX�n���y�9Cک_V�����dm"9���!�-����-,�"��g��(2=z�
+-~a㥄{���s�$���,�N]Tw�K���T�
+-�A���:V���=W,8���-����L�M%��������<�m�[L5���4MΩ�����j��ZL�mH3�	-)d�a,���>}D�f�X���%�G�m8ή�9\k�Z�2���v��Z>�e��O�Ǵ��0IyNڇL�[���/�`�:���t:�Nv��lr�����    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/res/drawable-xxhdpi/ic_ubicacion_actual.png
+===================================================================
+diff --git a/app/src/main/res/drawable-xxhdpi/ic_ubicacion_actual.png b/app/src/main/res/drawable-xxhdpi/ic_ubicacion_actual.png
+deleted file mode 100644
+--- a/app/src/main/res/drawable-xxhdpi/ic_ubicacion_actual.png	(date 0)
++++ /dev/null	(date 0)
+@@ -1,5 +0,0 @@
+-�PNG
+-
+-   
+-IHDR   H   H   U�G  �IDATx^�=o1�SS��%-��^AKmhS��BK{��[<ʎ=g�{�=?��$�׳{��Cwww��d2�L����A_N�ӏ��˲�})���Ob$��ɺ�����$�"mŃ��#%�!��Y�ü�� �|@/�7���)��j���Zu���F���Wgr%�i�)����I2�%�H�t�z�ը9{��W����ɦ�^
+-�R%�Ы)[ݹJ4U�SgQW��tH?�qIN�kB���Sa�U]��lu��E�Tg��F��,�:=�e�BϪ�"I�E_�q�z�o5��I�,�*�ˑ�H�j��^*�*��QxA��[���3�x����;k&�x��bb�j0������T����6ް��ئa~�a2�x�����o��F�*�6ް?��L�P&�#�*��Q�e~���g�Vc�G�}"	�EO�q9�gu<�=�Yմ�(!�OL�*z*��Jr�gu�2���YEO�qVIn�lB�"��Y��m���f�Sg�ܕӯ)a8�b��$�0��xk/uQ�c�����V���=��nG��ru=z��	~d�$}3�.I�'�V�{+K�(SmO�VJw�u�kNE�A)w֥�>�9sY��<>���_��x˂=Ta���/��O�mj����o1�ē���T;��"^S�PS�xC�9N�R��rChe�@�o�ͰB+��/���J������\ք�H���գC�w�lE��V�v3Ey�,�{��D~3���V7�bM&��d��?[��:��    IEND�B`�
+\ No newline at end of file
+Index: app/src/main/java/com/example/sucursalesapp/clases/Mensajes.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/sucursalesapp/clases/Mensajes.java b/app/src/main/java/com/example/sucursalesapp/clases/Mensajes.java
+--- a/app/src/main/java/com/example/sucursalesapp/clases/Mensajes.java	(date 1637016839327)
++++ b/app/src/main/java/com/example/sucursalesapp/clases/Mensajes.java	(date 1637016839327)
+@@ -1,2 +1,44 @@
+-package com.example.sucursalesapp.clases;public class Mensajes {
++package com.example.sucursalesapp.clases;
++
++import android.content.Context;
++import android.content.DialogInterface;
++
++import androidx.appcompat.app.AlertDialog;
++
++public class Mensajes {
++    private Context contexto;
++
++    public Mensajes(Context contexto) {
++        this.contexto = contexto;
++    }
++
++    public void alert(String titulo, String cuerpo)
++    {
++        AlertDialog.Builder msj = new AlertDialog.Builder(this.contexto);
++        msj.setTitle(titulo);
++        msj.setMessage(cuerpo);
++        msj.create();
++        msj.show();
++    }
++    public void confirm(String titulo, String cuerpo, DialogInterface.OnClickListener opcionSi, DialogInterface.OnClickListener opcionNo)
++    {
++        AlertDialog.Builder msj = new AlertDialog.Builder(this.contexto);
++        msj.setTitle(titulo);
++        msj.setMessage(cuerpo);
++        msj.setPositiveButton("Aceptar", opcionSi);
++        msj.setNegativeButton("Cancelar", opcionNo);
++        msj.create();
++        msj.show();
++
++    }
++    public void confirm(String titulo, String cuerpo,DialogInterface.OnClickListener opcionSi, DialogInterface.OnClickListener opcionNo)
++    {
++        AlertDialog.Builder msj = new AlertDialog.Builder(this.contexto);
++        msj.setTitle(titulo);
++        msj.setMessage(cuerpo);
++        msj.setPositiveButton("Aceptar", opcionSi);
++        msj.setNegativeButton("Cancelar", opcionNo);
++        msj.create();
++        msj.show();
++    }
+ }
+Index: app/src/main/java/com/example/sucursalesapp/clases/SqliteConex.java
+===================================================================
+diff --git a/app/src/main/java/com/example/sucursalesapp/clases/SqliteConex.java b/app/src/main/java/com/example/sucursalesapp/clases/SqliteConex.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/sucursalesapp/clases/SqliteConex.java	(date 0)
++++ /dev/null	(date 0)
+@@ -1,28 +0,0 @@
+-package com.example.sucursalesapp.clases;
+-
+-import android.content.Context;
+-import android.database.sqlite.SQLiteDatabase;
+-import android.database.sqlite.SQLiteOpenHelper;
+-
+-import androidx.annotation.Nullable;
+-
+-public class SqliteConex extends SQLiteOpenHelper {
+-    private static final String nombre_bd="sucursalesapp";
+-
+-    public SqliteConex(@Nullable Context c)
+-    {
+-        super(c,nombre_bd,null,2);
+-
+-    }
+-
+-    @Override
+-    public void onCreate(SQLiteDatabase db) {
+-        db.execSQL("CREATE TABLE \"usuarios\" ( \"id\" INTEGER NOT NULL, \"nombres\" TEXT NOT NULL, \"apellidos\" TEXT NOT NULL, \"email\" TEXT, \"clave\" TEXT, PRIMARY KEY(\"id\") )");
+-    
+-    }
+-
+-    @Override
+-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+-        db.execSQL("DROP TABLE usuarios");
+-    }
+-}
+Index: app/src/main/java/com/example/sucursalesapp/bienvenida.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/sucursalesapp/bienvenida.java b/app/src/main/java/com/example/sucursalesapp/bienvenida.java
+--- a/app/src/main/java/com/example/sucursalesapp/bienvenida.java	(date 1637016519533)
++++ b/app/src/main/java/com/example/sucursalesapp/bienvenida.java	(date 1637016519533)
+@@ -16,10 +16,11 @@
+         new Handler().postDelayed(new Runnable() {
+             @Override
+             public void run() {
+-                Intent intent=new Intent(bienvenida.this,MainActivity.class);
++                Intent intent=new Intent(bienvenida.this, LoginActivity.class);
+                 startActivity(intent);
+                 finish();
+             }
+         },2000);
++
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/sucursalesapp/MainActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/sucursalesapp/MainActivity.java b/app/src/main/java/com/example/sucursalesapp/MainActivity.java
+--- a/app/src/main/java/com/example/sucursalesapp/MainActivity.java	(date 1637016519533)
++++ b/app/src/main/java/com/example/sucursalesapp/MainActivity.java	(date 1637016519533)
+@@ -1,14 +1,55 @@
+ package com.example.sucursalesapp;
+ 
++import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.content.Intent;
+ import android.os.Bundle;
++import android.view.Menu;
++import android.view.MenuInflater;
++import android.view.MenuItem;
+ 
+ public class MainActivity extends AppCompatActivity {
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
++        setTheme(R.style.Theme_Sucursalesapp_barra);
++
+         setContentView(R.layout.activity_main);
++
++    }
++
++    @Override
++    public boolean onCreateOptionsMenu(Menu menu) {
++        MenuInflater propiedadesMenu=getMenuInflater();
++        propiedadesMenu.inflate(R.menu.mainmenu, menu);
++
++        return super.onCreateOptionsMenu(menu);
++    }
++
++    @Override
++    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
++        switch (item.getItemId())
++        {
++            case R.id.main_settings:
++                Intent k=new Intent(this, AgregarBancoActivity.class);
++                startActivity(k);
++                break;
++            case R.id.main_map:
++                break;
++            case R.id.main_about:
++                Intent i=new Intent(this, AcercaDe.class);
++                startActivity(i);
++                break;
++            case R.id.main_logout:
++                Intent j=new Intent(this, LoginActivity.class);
++                startActivity(j);
++                break;
++
++        }
++
++
++        return super.onOptionsItemSelected(item);
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/sucursalesapp/LoginActivity.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/sucursalesapp/LoginActivity.java b/app/src/main/java/com/example/sucursalesapp/LoginActivity.java
+--- a/app/src/main/java/com/example/sucursalesapp/LoginActivity.java	(date 1637016519502)
++++ b/app/src/main/java/com/example/sucursalesapp/LoginActivity.java	(date 1637016519502)
+@@ -3,33 +3,46 @@
+ import androidx.annotation.NonNull;
+ import androidx.appcompat.app.AppCompatActivity;
+ 
++import android.content.DialogInterface;
++import android.content.Intent;
+ import android.os.Bundle;
+ import android.view.Menu;
+ import android.view.MenuInflater;
+ import android.view.MenuItem;
++import android.view.View;
++import android.widget.Button;
++import android.widget.EditText;
+ 
+-public class MainActivity extends AppCompatActivity {
++import com.example.sucursalesapp.clases.Mensajes;
++
++public class LoginActivity extends AppCompatActivity {
+ 
+     @Override
+     protected void onCreate(Bundle savedInstanceState) {
+         super.onCreate(savedInstanceState);
+-        setContentView(R.layout.activity_main);
+-    }
++        setContentView(R.layout.activity_login);
+ 
+-    @Override
+-    public boolean onCreateOptionsMenu(Menu menu) {
+-        MenuInflater propertiesMenu = getMenuInflater();
+-        propertiesMenu.inflate(R.menu.mainmenu, menu);
+-        return super.onCreateOptionsMenu(menu);
+-    }
+-
+-    @Override
+-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+-
++        Button btnAcceder = (Button) findViewById(R.id.button);
++        EditText txtUsuario = (EditText) findViewById(R.id.editTextTextEmailAddress);
++        EditText txtClave = (EditText) findViewById(R.id.editTextTextPassword);
++
++        btnAcceder.setOnClickListener(new View.OnClickListener() {
++            @Override
++            public void onClick(View view) {
++                String usuarioDigitado = txtUsuario.getText().toString();
++                String claveDigitada = txtClave.getText().toString();
+ 
++                if (usuarioDigitado.equals("email@gmail.com") && claveDigitada.equals("123"))
++                {
+ 
+ 
+ 
+-        return super.onOptionsItemSelected(item);
++                            Intent in = new Intent(view.getContext(),MainActivity.class);
++                            //in.putExtra("usuario", txtUsuario.getText().toString());
++                            startActivity(in);
++                }
++                else new Mensajes(view.getContext()).alert("Error","Campos Incorrectos");
++            };
++        });
+     }
+ }
+\ No newline at end of file
+Index: app/src/main/java/com/example/sucursalesapp/ado/UsuarioADO.java
+===================================================================
+diff --git a/app/src/main/java/com/example/sucursalesapp/ado/UsuarioADO.java b/app/src/main/java/com/example/sucursalesapp/ado/UsuarioADO.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/sucursalesapp/ado/UsuarioADO.java	(date 0)
++++ /dev/null	(date 0)
+@@ -1,39 +0,0 @@
+-package com.example.sucursalesapp.ado;
+-
+-import android.content.Context;
+-
+-import androidx.annotation.Nullable;
+-
+-import com.example.sucursalesapp.clases.SqliteConex;
+-import com.example.sucursalesapp.modelos.Usuario;
+-
+-public class UsuarioADO extends SqliteConex {
+-
+-    private Context contexto;
+-    public UsuarioADO(@Nullable Context c)
+-    {
+-        super(c);
+-        this.contexto=c;
+-    }
+-    public long insertar(Usuario us)
+-    {
+-        long id=0;
+-
+-
+-
+-        return id;
+-    }
+-
+-    public boolean validarUsuario(Usuario us)
+-    {
+-        boolean validado=false;
+-        String emailfijo="user@gmail.com";
+-        String clavefija="root";
+-
+-        if(us.getEmail().equals(emailfijo)&& us.getClave().equals(clavefija))
+-            validado=true;
+-        return validado;
+-
+-
+-    }
+-}
+Index: app/src/main/java/com/example/sucursalesapp/modelos/Usuario.java
+===================================================================
+diff --git a/app/src/main/java/com/example/sucursalesapp/modelos/Usuario.java b/app/src/main/java/com/example/sucursalesapp/modelos/Usuario.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/sucursalesapp/modelos/Usuario.java	(date 0)
++++ /dev/null	(date 0)
+@@ -1,53 +0,0 @@
+-package com.example.sucursalesapp.modelos;
+-
+-public class Usuario {
+-    private int id;
+-    private String nombres;
+-    private String apellidos;
+-    private String email;
+-    private String clave;
+-
+-    public int getId() {
+-        return id;
+-    }
+-
+-    public void setId(int id) {
+-        this.id = id;
+-    }
+-
+-    public String getNombres() {
+-        return nombres;
+-    }
+-
+-    public void setNombres(String nombres) {
+-        this.nombres = nombres;
+-    }
+-
+-    public String getApellidos() {
+-        return apellidos;
+-    }
+-
+-    public void setApellidos(String apellidos) {
+-        this.apellidos = apellidos;
+-    }
+-
+-    public String getEmail() {
+-        return email;
+-    }
+-
+-    public void setEmail(String email) {
+-        this.email = email;
+-    }
+-
+-    public String getClave() {
+-        return clave;
+-    }
+-
+-    public void setClave(String clave) {
+-        this.clave = clave;
+-    }
+-
+-    public Usuario(){
+-
+-    }
+-}
+Index: app/src/main/java/com/example/sucursalesapp/MapsActivity.java
+===================================================================
+diff --git a/app/src/main/java/com/example/sucursalesapp/MapsActivity.java b/app/src/main/java/com/example/sucursalesapp/MapsActivity.java
+deleted file mode 100644
+--- a/app/src/main/java/com/example/sucursalesapp/MapsActivity.java	(date 0)
++++ /dev/null	(date 0)
+@@ -1,51 +0,0 @@
+-package com.example.sucursalesapp;
+-
+-import androidx.fragment.app.FragmentActivity;
+-
+-import android.os.Bundle;
+-
+-import com.google.android.gms.maps.CameraUpdateFactory;
+-import com.google.android.gms.maps.GoogleMap;
+-import com.google.android.gms.maps.OnMapReadyCallback;
+-import com.google.android.gms.maps.SupportMapFragment;
+-import com.google.android.gms.maps.model.LatLng;
+-import com.google.android.gms.maps.model.MarkerOptions;
+-import com.example.sucursalesapp.databinding.ActivityMapsBinding;
+-
+-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+-
+-    private GoogleMap mMap;
+-    private ActivityMapsBinding binding;
+-
+-    @Override
+-    protected void onCreate(Bundle savedInstanceState) {
+-        super.onCreate(savedInstanceState);
+-
+-        binding = ActivityMapsBinding.inflate(getLayoutInflater());
+-        setContentView(binding.getRoot());
+-
+-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+-                .findFragmentById(R.id.map);
+-        mapFragment.getMapAsync(this);
+-    }
+-
+-    /**
+-     * Manipulates the map once available.
+-     * This callback is triggered when the map is ready to be used.
+-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
+-     * we just add a marker near Sydney, Australia.
+-     * If Google Play services is not installed on the device, the user will be prompted to install
+-     * it inside the SupportMapFragment. This method will only be triggered once the user has
+-     * installed Google Play services and returned to the app.
+-     */
+-    @Override
+-    public void onMapReady(GoogleMap googleMap) {
+-        mMap = googleMap;
+-
+-        // Add a marker in Sydney and move the camera
+-        LatLng sydney = new LatLng(-34, 151);
+-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+-    }
+-}
+\ No newline at end of file
+Index: app/src/main/AndroidManifest.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+--- a/app/src/main/AndroidManifest.xml	(date 1637016839296)
++++ b/app/src/main/AndroidManifest.xml	(date 1637016839296)
+@@ -1,23 +1,30 @@
+ <?xml version="1.0" encoding="utf-8"?>
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-    package="com.example.sucursalesapp">
++    package="com.example.sucursalesapp" >
+ 
+     <application
+         android:allowBackup="true"
+         android:icon="@mipmap/ic_launcher"
+         android:label="@string/app_name"
+-        android:roundIcon="@mipmap/ic_launcher_round"
++        android:roundIcon="@mipmap/ic_launcher"
+         android:supportsRtl="true"
+-        android:theme="@style/Theme.Sucursalesapp">
++        android:theme="@style/Theme.Sucursalesapp" >
+         <activity
++
++            android:name=".MainActivity"
++            android:exported="false" />
++        <activity
++            android:name=".AcercaDe"
++            android:exported="false" />
++        <activity
+             android:name=".AgregarBancoActivity"
+             android:exported="false" />
+         <activity
+-            android:name=".MainActivity"
++            android:name=".LoginActivity"
+             android:exported="false" />
+         <activity
+             android:name=".bienvenida"
+-            android:exported="true">
++            android:exported="true" >
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+ 
+Index: app/src/androidTest/java/com/example/sucursalesapp/ado/UsuarioADOTest.java
+===================================================================
+diff --git a/app/src/androidTest/java/com/example/sucursalesapp/ado/UsuarioADOTest.java b/app/src/androidTest/java/com/example/sucursalesapp/ado/UsuarioADOTest.java
+deleted file mode 100644
+--- a/app/src/androidTest/java/com/example/sucursalesapp/ado/UsuarioADOTest.java	(date 0)
++++ /dev/null	(date 0)
+@@ -1,21 +0,0 @@
+-package com.example.sucursalesapp.ado;
+-
+-import com.example.sucursalesapp.modelos.Usuario;
+-
+-import junit.framework.TestCase;
+-
+-public class UsuarioADOTest extends TestCase {
+-
+-    public void testValidarUsuario() {
+-
+-        UsuarioADO us=new UsuarioADO();
+-
+-        Usuario modelo=new Usuario();
+-        modelo.setEmail("user@gmail.com");
+-        modelo.setClave("root");
+-
+-        boolean resultado= us.validarUsuario(modelo);
+-
+-        assertEquals(true,resultado);
+-    }
+-}
+\ No newline at end of file
+Index: app/src/debug/res/values/google_maps_api.xml
+===================================================================
+diff --git a/app/src/debug/res/values/google_maps_api.xml b/app/src/debug/res/values/google_maps_api.xml
+deleted file mode 100644
+--- a/app/src/debug/res/values/google_maps_api.xml	(date 0)
++++ /dev/null	(date 0)
+@@ -1,24 +0,0 @@
+-<resources>
+-    <!--
+-    TODO: Before you run your application, you need a Google Maps API key.
+-
+-    To get one, follow this link, follow the directions and press "Create" at the end:
+-
+-    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=EF:B4:09:1A:86:FA:25:9A:29:65:DC:13:58:DE:FA:94:C8:D5:01:23%3Bcom.example.sucursalesapp
+-
+-    You can also add your credentials to an existing key, using these values:
+-
+-    Package name:
+-    com.example.sucursalesapp
+-
+-    SHA-1 certificate fingerprint:
+-    EF:B4:09:1A:86:FA:25:9A:29:65:DC:13:58:DE:FA:94:C8:D5:01:23
+-
+-    Alternatively, follow the directions here:
+-    https://developers.google.com/maps/documentation/android/start#get-key
+-
+-    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+-    string in this file.
+-    -->
+-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">YOUR_KEY_HERE</string>
+-</resources>
+\ No newline at end of file
+Index: app/src/release/res/values/google_maps_api.xml
+===================================================================
+diff --git a/app/src/release/res/values/google_maps_api.xml b/app/src/release/res/values/google_maps_api.xml
+deleted file mode 100644
+--- a/app/src/release/res/values/google_maps_api.xml	(date 0)
++++ /dev/null	(date 0)
+@@ -1,20 +0,0 @@
+-<resources>
+-    <!--
+-    TODO: Before you release your application, you need a Google Maps API key.
+-
+-    To do this, you can either add your release key credentials to your existing
+-    key, or create a new key.
+-
+-    Note that this file specifies the API key for the release build target.
+-    If you have previously set up a key for the debug target with the debug signing certificate,
+-    you will also need to set up a key for your release certificate.
+-
+-    Follow the directions here:
+-
+-    https://developers.google.com/maps/documentation/android/signup
+-
+-    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+-    string in this file.
+-    -->
+-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">YOUR_KEY_HERE</string>
+-</resources>
+\ No newline at end of file

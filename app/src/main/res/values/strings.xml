@@ -1,7 +1,11 @@
 <resources>
     <string name="app_name">Sucursalesapp</string>
-    <string name="main_profile">Ver perfil</string>
+    <string name="main_profile">Agregar Banco</string>
     <string name="main_map">Ver mapa</string>
     <string name="main_about">Acerca de</string>
     <string name="main_logout">Cerrar Sesión</string>
+    <string name="menu_ubicacion_actual">Obtener ubicación actual</string>
+    <string name="menu_ver_mapa">Cargar el mapa</string>
+    <string name="menu_admin_sitios">Administración de Sitios</string>
+
 </resources>
