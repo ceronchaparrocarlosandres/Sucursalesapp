@@ -2,12 +2,15 @@ package com.example.sucursalesapp.ado;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
 import com.example.sucursalesapp.clases.SqliteConex;
 import com.example.sucursalesapp.modelos.Usuario;
+
+import java.util.ArrayList;
 
 public class UsuarioADO extends SqliteConex {
 
@@ -40,9 +43,29 @@ public class UsuarioADO extends SqliteConex {
 
         }
 
-
-
         return id;
+    }
+    public ArrayList<Usuario> listar()
+    {
+        SqliteConex conexion = new SqliteConex(this.contexto);
+        SQLiteDatabase db = conexion.getWritableDatabase();
+
+        ArrayList<Usuario> registros = new ArrayList<>();
+        Cursor cregistros = db.rawQuery("select id, nombres, apellidos, email, clave from usuarios", null);
+
+        if(cregistros.moveToFirst())
+            do {
+                Usuario us = new Usuario();
+                us.setId(cregistros.getInt(0));
+                us.setNombres(cregistros.getString(1));
+                us.setApellidos(cregistros.getString(2));
+                us.setEmail(cregistros.getString(3));
+                us.setClave(cregistros.getString(4));
+
+                registros.add(us);
+            }while (cregistros.moveToNext());
+
+        return registros;
     }
 
     public boolean validarUsuario(Usuario us)

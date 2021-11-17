@@ -8,7 +8,7 @@ public class UsuarioADOTest extends TestCase {
 
     public void testValidarUsuario() {
 
-        UsuarioADO us=new UsuarioADO();
+        UsuarioADO us=new UsuarioADO(null);
 
         Usuario modelo=new Usuario();
         modelo.setEmail("user@gmail.com");

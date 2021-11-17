@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import androidx.annotation.Nullable;
 
 public class SqliteConex extends SQLiteOpenHelper {
-    private static final String nombre_bd="sucursalesapp";
+    private static final String nombre_bd="sucursalesapp.db";
 
     public SqliteConex(@Nullable Context c)
     {
@@ -17,7 +17,7 @@ public class SqliteConex extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE usuarios (id INTEGER PRIMARY KEY NOT NULL UNIQUE, nombres VARCHAR (50) NOT NULL, apellidos VARCHAR (50) NOT NULL, email VARCHAR (50) NOT NULL, contraseña VARCHAR (50) NOT NULL);");
+        db.execSQL("CREATE TABLE usuarios (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, nombres VARCHAR (150) NOT NULL, apellidos VARCHAR (150) NOT NULL, email VARCHAR (150) NOT NULL, clave VARCHAR (10) NOT NULL);");
     }
 
     @Override
